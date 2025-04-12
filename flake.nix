@@ -22,7 +22,9 @@
           packages = [
             pkgs.bashInteractive
             pkgs.nodejs-slim
+            pkgs.nodePackages.prettier
             pkgs.pnpm_9
+            pkgs.typescript-language-server
           ];
         };
       }
