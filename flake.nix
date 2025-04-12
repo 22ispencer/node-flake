@@ -1,5 +1,5 @@
 {
-  description = "A very basic flake";
+  description = "A very basic nodejs flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -19,7 +19,11 @@
       in
       {
         devShells.default = pkgs.mkShell {
-          packages = [ pkgs.dotnet-sdk_9 ];
+          packages = [
+            pkgs.bashInteractive
+            pkgs.nodejs-slim
+            pkgs.pnpm_9
+          ];
         };
       }
     );
